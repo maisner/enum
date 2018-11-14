@@ -1,0 +1,25 @@
+{
+  "name": "maisner/enum",
+  "description": "Enum PHP implementation",
+  "keywords": [
+    "PHP",
+    "enum"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/maisner/enum",
+  "authors": [
+    {
+      "name": "Michal Šmeidler",
+      "homepage": "https://github.com/maisner"
+    }
+  ],
+  "require": {
+    "php": ">= 7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maisner\\Enum\\": "src"
+    }
+  }
+}

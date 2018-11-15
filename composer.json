@@ -17,9 +17,31 @@
   "require": {
     "php": ">= 7.1"
   },
+  "require-dev": {
+    "phpstan/phpstan": "^0.10.5",
+    "phpstan/phpstan-strict-rules": "^0.10.1",
+    "phpunit/phpunit": "^7.4",
+    "slevomat/coding-standard": "^4.8"
+  },
   "autoload": {
     "psr-4": {
       "Maisner\\Enum\\": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Maisner\\Enum\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "tests": "php vendor/phpunit/phpunit/phpunit tests",
+    "phpstan": "php vendor/phpstan/phpstan/bin/phpstan analyse -l 7 -c phpstan.neon src",
+    "cs": "php vendor/squizlabs/php_codesniffer/bin/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+    "cs-fix": "php vendor/squizlabs/php_codesniffer/bin/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+    "build": [
+      "@cs",
+      "@phpstan",
+      "@tests"
+    ]
   }
 }

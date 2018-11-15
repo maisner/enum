@@ -26,7 +26,7 @@ abstract class AbstractEnum {
 				\implode(', ', $this::allowedValues())
 			);
 
-			throw new NotAllowedValueException($message);
+			throw new \Maisner\Enum\NotAllowedValueException($message);
 		}
 		$this->value = $value;
 	}

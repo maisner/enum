@@ -43,7 +43,7 @@ class TypeEnum extends AbstractEnum {
  - and usage
 
 ```php
-$type = new TypeEnum::TEMPERATURE();
+$type = TypeEnum::TEMPERATURE();
 
 $type->getValue();	//temperature
 (string)$type;		//temperature
